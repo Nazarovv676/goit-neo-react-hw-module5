@@ -1,0 +1,35 @@
+.video-frame {
+  width: 350px;
+  height: 200px;
+  margin-top: 0;
+  display: border-box;
+  border: 7px solid var(--color-surface);
+  border-radius: var(--radius-sm);
+}
+
+.no-trailer {
+  width: 350px;
+  height: 200px;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 7px solid var(--color-surface);
+  border-radius: var(--radius-sm);
+  border-top-left-radius: 0;
+  background-color: var(--color-surface-2);
+  color: var(--color-text-muted);
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .video-frame {
+    width: 500px;
+    height: 300px;
+  }
+
+  .no-trailer {
+    width: 500px;
+    height: 300px;
+  }
+}

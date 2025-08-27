@@ -1,0 +1,94 @@
+.container {
+  width: 100%;
+}
+
+.castGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.castMember {
+  background: var(--theme-surface, var(--color-surface));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.castMember:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.actorImage {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.actorImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.castMember:hover .actorImage img {
+  transform: scale(1.05);
+}
+
+.noImage {
+  width: 100%;
+  height: 100%;
+  background: var(--theme-surface, var(--color-surface-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--theme-muted, var(--color-text-muted));
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.actorInfo {
+  padding: var(--space-4);
+}
+
+.actorName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--theme-text, var(--color-text));
+  margin: 0 0 var(--space-2) 0;
+  line-height: 1.3;
+}
+
+.characterName {
+  font-size: 0.875rem;
+  color: var(--theme-muted, var(--color-text-muted));
+  margin: 0;
+  font-style: italic;
+}
+
+.moreInfo {
+  text-align: center;
+  color: var(--theme-muted, var(--color-text-muted));
+  font-size: 0.875rem;
+  margin-top: var(--space-6);
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--space-8) 0;
+}
+
+.emptyState h2 {
+  color: var(--theme-text, var(--color-text));
+  margin-bottom: var(--space-3);
+}
+
+.emptyState p {
+  color: var(--theme-muted, var(--color-text-muted));
+  font-size: 1.1rem;
+}

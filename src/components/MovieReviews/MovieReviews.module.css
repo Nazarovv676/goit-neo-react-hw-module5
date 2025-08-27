@@ -1,0 +1,115 @@
+.container {
+  width: 100%;
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.reviewCard {
+  background: var(--theme-surface, var(--color-surface));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: all 0.3s ease;
+}
+
+.reviewCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+  gap: var(--space-4);
+}
+
+.authorInfo {
+  flex: 1;
+}
+
+.authorName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--theme-text, var(--color-text));
+  margin: 0 0 var(--space-1) 0;
+}
+
+.reviewDate {
+  font-size: 0.875rem;
+  color: var(--theme-muted, var(--color-text-muted));
+  margin: 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 50px;
+  background: var(--theme-primary, var(--color-primary));
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ratingValue {
+  color: var(--theme-text, var(--color-text));
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.reviewContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.reviewText {
+  color: var(--theme-muted, var(--color-text-muted));
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.readMore {
+  color: var(--theme-primary, var(--color-primary));
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+  align-self: flex-start;
+}
+
+.readMore:hover {
+  color: var(--theme-accent, var(--color-primary-600));
+  text-decoration: underline;
+}
+
+.moreInfo {
+  text-align: center;
+  color: var(--theme-muted, var(--color-text-muted));
+  font-size: 0.875rem;
+  margin-top: var(--space-6);
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--space-8) 0;
+}
+
+.emptyState h2 {
+  color: var(--theme-text, var(--color-text));
+  margin-bottom: var(--space-3);
+}
+
+.emptyState p {
+  color: var(--theme-muted, var(--color-text-muted));
+  font-size: 1.1rem;
+}
