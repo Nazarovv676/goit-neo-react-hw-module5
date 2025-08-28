@@ -1,8 +1,4 @@
-import { lazy } from "react";
-
-const MoviesPage = lazy(() => import("./MoviesPage"));
-const HomePage = lazy(() => import("./HomePage"));
-const MovieDetailsPage = lazy(() => import("./MovieDetailsPage"));
-const NotFoundPage = lazy(() => import("./NotFoundPage"));
-
-export { MoviesPage, HomePage, MovieDetailsPage, NotFoundPage }
+export { default as HomePage } from "./HomePage";
+export { default as MovieDetailsPage } from "./MovieDetailsPage";
+export { default as MoviesPage } from "./MoviesPage";
+export { default as NotFoundPage } from "./NotFoundPage";

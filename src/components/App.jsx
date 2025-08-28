@@ -1,7 +1,6 @@
 //libraries
+import { Suspense, lazy } from "react";
 import ReactModal from "react-modal";
-// import toast, { Toaster } from "react-hot-toast";
-import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
 //components
@@ -11,8 +10,11 @@ import MovieCast from "./MovieCast";
 import MovieReviews from "./MovieReviews";
 import Navigation from "./Navigation";
 
-//Pages
-import { HomePage, MovieDetailsPage, MoviesPage, NotFoundPage } from "../pages";
+//Pages - using React.lazy for dynamic imports
+const HomePage = lazy(() => import("../pages/HomePage"));
+const MovieDetailsPage = lazy(() => import("../pages/MovieDetailsPage"));
+const MoviesPage = lazy(() => import("../pages/MoviesPage"));
+const NotFoundPage = lazy(() => import("../pages/NotFoundPage"));
 
 //api
 
